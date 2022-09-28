@@ -31,7 +31,7 @@ def create_app():
       app.config.from_object(LocalDevelopmentConfig)
     db.init_app(app)
     migrate = Migrate(app, db)
-    app.app_context().push()
+    # app.app_context().push()
     app.logger.info("App setup complete")
     # Setup Flask-Security
     user_datastore = SQLAlchemySessionUserDatastore(db.session, User, Role)
