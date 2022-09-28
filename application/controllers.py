@@ -1,13 +1,14 @@
+from main import app
 from flask import Flask, request
 from flask import render_template
-from flask import current_app as app
+from flask import current_app
 from application.models import Article
 from flask_security import login_required, roles_accepted, roles_required
 
 @app.route("/", methods=["GET", "POST"])
 def articles():
     app.logger.info("Inside get all articles using info")
-    articles = Article.query.all()    
+    articles = Article.query.all()
     app.logger.debug("Inside get all articles using debug")
     return render_template("articles.html", articles=articles)
 

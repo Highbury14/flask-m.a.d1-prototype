@@ -22,12 +22,12 @@ def create_app():
       app.logger.info("Currently no production config is setup.")
       raise Exception("Currently no production config is setup.")
     elif os.getenv('ENV', "development") == "testing":
-      app.logger.info("Staring Testing.")
-      print("Staring Testing")
+      app.logger.info("Starting Testing.")
+      print("Starting Testing")
       app.config.from_object(TestingConfig)
     else:
-      app.logger.info("Staring Local Development.")
-      print("Staring Local Development")
+      app.logger.info("Starting Local Development.")
+      print("Starting Local Development")
       app.config.from_object(LocalDevelopmentConfig)
     db.init_app(app)
     migrate = Migrate(app, db)
