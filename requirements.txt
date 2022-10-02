@@ -9,3 +9,4 @@ pytest
 coverage
 beautifulsoup4
 Flask-Migrate
+Flask-Restful
