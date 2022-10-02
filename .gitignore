@@ -137,3 +137,4 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 db_directory/*.sqlite3
+.vscode/
