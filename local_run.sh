@@ -1,14 +1,16 @@
 #! /bin/sh
 echo "======================================================================"
-echo "Welcome to to the setup. This will setup the local virtual env." 
-echo "And then it will install all the required python libraries."
+echo "Welcome to to the application-run shell-script. This will run the application."
+echo "Before running this shell-script, you have to first setup the local virtual environment using the setup shell-script."
+echo "And then it will also load all the required python libraries."
 echo "You can rerun this without any issues."
 echo "----------------------------------------------------------------------"
+
 if [ -d ".env" ];
 then
     echo "Enabling virtual env"
 else
-    echo "No Virtual env. Please run setup.sh first"
+    echo "No Virtual env. Please run local_setup.sh first."
     exit N
 fi
 
