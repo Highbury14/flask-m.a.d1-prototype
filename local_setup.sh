@@ -7,17 +7,17 @@ echo "----------------------------------------------------------------------"
 
 if [ -d ".env" ];
 then
-    echo ".env folder exists. Installing dependant libraries using pip."
+  echo ".env folder exists. Installing dependant libraries using pip."
 else
-    echo "creating .env and installing dependant libraries using pip."
-    python3.7 -m venv .env
+  echo "Creating .env and installing dependant libraries using pip."
+  python3.7 -m venv .env
 fi
 
-# Activate virtual env
+# Activate virtual env.
 . .env/bin/activate
 
-# Upgrade the PIP
+# Upgrade PIP packages.
 pip install --upgrade pip
 pip install -r requirements.txt
-# Work done. so deactivate the virtual env
+# Deactivate virtual env.
 deactivate

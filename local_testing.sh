@@ -8,13 +8,13 @@ echo "----------------------------------------------------------------------"
 
 if [ -d ".env" ];
 then
-    echo "Enabling virtual env"
+  echo "Enabling virtual env."
 else
-    echo "No Virtual env. Please run local_setup.sh first"
-    exit N
+  echo "No virtual env. exists. Please run local_setup.sh first."
+  exit N
 fi
 
-# Activate virtual env
+# Activate virtual env.
 . .env/bin/activate
 export ENV=testing
 pytest --verbose --disable-warnings -s

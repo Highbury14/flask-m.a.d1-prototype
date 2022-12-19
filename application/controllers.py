@@ -1,9 +1,8 @@
-from main import app
 from flask import Flask, request
 from flask import render_template
-from flask import current_app
-from application.models import Article
+from flask import current_app as app
 from flask_security import login_required, roles_accepted, roles_required
+from application.models import Article
 
 @app.route("/", methods=["GET", "POST"])
 def articles():
