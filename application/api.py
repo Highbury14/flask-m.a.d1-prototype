@@ -1,12 +1,12 @@
 from flask_restful import Resource, Api
 from flask_restful import fields, marshal_with
 from flask_restful import reqparse
+from flask import current_app as app
+from flask import abort
+import werkzeug
 from application.validation import BusinessValidationError, NotFoundError
 from application.models import User
 from application.database import db
-from flask import current_app as app
-import werkzeug
-from flask import abort
 
 create_user_parser = reqparse.RequestParser()
 create_user_parser.add_argument('username')
