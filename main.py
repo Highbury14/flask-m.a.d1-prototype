@@ -31,12 +31,12 @@ def create_app():
   db.init_app(app)
   migrate = Migrate(app, db)
   api = Api(app)
-  # app.app_context().push()
   app.logger.info("App setup completed.")
   print("App setup completed.")
   # Setup Flask-Security
   user_datastore = SQLAlchemySessionUserDatastore(db.session, User, Role)
   security = Security(app, user_datastore)
+  app.app_context().push()
   return app, api
 
 app, api = create_app()
