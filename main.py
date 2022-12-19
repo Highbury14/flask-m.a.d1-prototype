@@ -40,6 +40,7 @@ def create_app():
   return app, api
 
 app, api = create_app()
+
 # Import and load all the controllers.
 print("Importing all the controllers.")
 from application.controllers import *
